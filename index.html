@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Simple Frontend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#home" class="brand">MySite</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pokedex">寶可夢查詢</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h1>歡迎</h1>
+      <p>這是一個簡單的 HTML/CSS/JS 範例網站，無使用任何框架。</p>
+      <a href="#features" class="btn">了解更多</a>
+    </section>
+
+    <section id="features" class="features">
+      <h2>特色</h2>
+      <div class="grid">
+        <article>
+          <h3>響應式</h3>
+          <p>手機優先的佈局。</p>
+        </article>
+        <article>
+          <h3>輕量</h3>
+          <p>沒有任何框架或大套件。</p>
+        </article>
+        <article>
+          <h3>互動</h3>
+          <p>小量 JavaScript 提升使用者體驗。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pokedex" class="pokedex">
+      <h2>寶可夢查詢</h2>
+      <p>輸入寶可夢中文名稱、英文名稱或編號，查詢屬性、種族值、技能與進化型。</p>
+      
+      <div class="gas-config">
+        <label for="gasUrl">Google Apps Script 網址 (可選)</label>
+        <input id="gasUrl" name="gasUrl" type="url" placeholder="例如：https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/useless/doPost">
+        <small>輸入 GAS 網址以啟用「保存到 Google Sheets」功能</small>
+      </div>
+
+      <form id="pokemonForm" novalidate>
+        <label for="pokemonName">寶可夢名稱或編號</label>
+        <input id="pokemonName" name="pokemonName" placeholder="例如：皮卡丘、Pikachu 或 25" required>
+
+        <div class="button-group">
+          <button type="submit" class="btn">查詢</button>
+          <button type="button" id="randomPokemonBtn" class="btn btn-secondary">🎲 隨機寶可夢</button>
+        </div>
+        <p id="pokemonStatus" class="status" aria-live="polite"></p>
+      </form>
+      <div id="pokemonResult" class="poke-result"></div>
+      <p id="saveStatus" class="status" aria-live="polite"></p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>聯絡我們</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">姓名</label>
+        <input id="name" name="name" required>
+
+        <label for="email">電子郵件</label>
+        <input id="email" type="email" name="email" required>
+
+        <label for="message">訊息</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="btn">送出</button>
+        <p id="formStatus" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

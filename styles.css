@@ -1,0 +1,56 @@
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f7f7fb;
+  --primary:#0b5cff;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --radius:8px;
+  --gap:16px;
+}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;background:var(--bg);color:#111}
+.site-header{background:var(--card);box-shadow:0 1px 4px rgba(12,12,12,0.06)}
+.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px}
+.brand{font-weight:700;color:var(--primary);text-decoration:none}
+.nav-toggle{display:none;background:none;border:0;font-size:22px}
+.nav-list{list-style:none;display:flex;gap:12px}
+.nav-list a{text-decoration:none;color:inherit;padding:8px 10px;border-radius:6px}
+.nav-list a:hover{background:rgba(11,92,255,0.08)}
+.hero{max-width:1100px;margin:36px auto;padding:24px;text-align:center}
+.hero h1{font-size:2rem;margin-bottom:8px}
+.btn{display:inline-block;background:var(--primary);color:white;padding:10px 16px;border-radius:6px;text-decoration:none}
+.features{max-width:1100px;margin:20px auto;padding:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+.grid article{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 1px 2px rgba(12,12,12,0.04)}
+.contact{max-width:700px;margin:20px auto;padding:24px}
+form label{display:block;margin-top:12px;margin-bottom:6px;color:var(--muted)}
+input,textarea{width:100%;padding:10px;border:1px solid #e6e6ee;border-radius:6px}
+textarea{min-height:120px}
+.status{margin-top:10px;color:var(--muted)}
+.pokedex{max-width:900px;margin:20px auto;padding:24px;background:var(--card);border-radius:var(--radius);box-shadow:0 1px 4px rgba(12,12,12,0.08)}
+.button-group{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.button-group .btn{flex:1;min-width:120px}
+.btn-secondary{background:#6b7280}
+.btn-secondary:hover{background:#5a6370}
+.btn-danger{background:#dc2626}
+.btn-danger:hover{background:#b91c1c}
+.gas-config{background:#f3f4f6;padding:14px;border-radius:6px;margin-bottom:16px;border-left:4px solid var(--primary)}
+.gas-config label{margin-bottom:8px}
+.gas-config small{display:block;color:var(--muted);margin-top:6px}
+.pokedex h2{margin-bottom:8px}
+.pokedex p{color:var(--muted);margin-bottom:18px}
+.pokedex form{display:grid;gap:12px;align-items:end}
+.pokedex input{max-width:420px}
+.poke-result{margin-top:20px}
+.poke-card{background:var(--bg);padding:18px;border-radius:var(--radius);box-shadow:0 1px 3px rgba(12,12,12,0.08)}
+.poke-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.poke-sprite{width:96px;height:auto;background:#fff;border-radius:16px;padding:10px;box-shadow:0 1px 3px rgba(12,12,12,0.08)}
+.poke-row{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.poke-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:14px}
+.poke-list{list-style:disc;margin:10px 0 0 20px;color:#333}
+.poke-chip{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(11,92,255,0.12);color:var(--primary);font-size:0.95rem;margin-right:6px;margin-top:4px}
+@media (max-width:720px){
+  .nav-list{display:none;position:absolute;top:60px;left:12px;right:12px;background:var(--card);flex-direction:column;padding:12px;border-radius:8px}
+  .nav-toggle{display:block}
+  .nav{position:relative}
+}
